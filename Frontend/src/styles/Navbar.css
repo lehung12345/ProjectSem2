@@ -1,0 +1,265 @@
+/* Navbar styles */
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  position: relative;
+  height: 13vh;
+}
+
+.logo {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  color: var(--antique-brown);
+}
+
+.nav-icons {
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.icon:hover {
+  color: var(--antique-brown);
+}
+
+/* Search styles */
+.search-icon-container {
+  position: relative;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.search-popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  padding: 10px;
+  width: 280px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.search-button {
+  position: absolute;
+  right: 30px;
+  background: transparent;
+  color: var(--dark);
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  color: var(--antique-brown);
+}
+
+.close-search-button {
+  position: absolute;
+  right: 5px;
+  background: transparent;
+  color: #999;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-search-button:hover {
+  color: #333;
+}
+
+.navlist {
+  background: #333;
+  position: absolute;
+  top: 100px;
+  right: 150px;
+  width: 15rem;
+  z-index: 5;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-radius: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--box-shadow);
+}
+
+.navlist-active {
+  right: 20px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navlist * {
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+.navlist li a {
+  transition: var(--transition);
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.navlist li a:hover {
+  color: var(--gold-hour);
+  transform: translateX(5px);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon-container, .user-icon-container {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--antique-brown);
+  color: white;
+  font-size: 0.7rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* User menu dropdown */
+.user-icon {
+  cursor: pointer;
+}
+
+.user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+.user-menu:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.user-menu-item {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.user-menu-item:hover {
+  background-color: #f5f5f5;
+  color: var(--antique-brown);
+}
+
+.user-info {
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 10vh;
+  }
+  
+  .nav-icons {
+    gap: 1rem;
+  }
+  
+  .navlist {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 10vh;
+    border-radius: 0;
+  }
+  
+  .navlist-active {
+    right: 0;
+  }
+} 

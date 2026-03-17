@@ -1,0 +1,347 @@
+/* General Page Layout */
+.orders-page-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  min-height: 70vh;
+}
+
+.orders-main-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Tab Navigation */
+.order-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: #000;
+}
+
+.tab-btn.active {
+  color: #8B4513; /* antique-brown */
+  border-bottom-color: #8B4513;
+}
+
+.order-count {
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+.tab-btn.active .order-count {
+  background-color: #8B4513;
+  color: white;
+}
+
+/* New Order Card Layout */
+.orders-list-new {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-card-new {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.order-card-new:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.order-id-new {
+  font-family: 'monospace';
+}
+
+/* Status Tags */
+.order-status-tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.order-status-tag.on-process {
+  background-color: #ffc107; /* Amber */
+}
+
+.order-status-tag.on-deliver {
+  background-color: #17a2b8; /* Info Blue */
+}
+
+.order-status-tag.arrived {
+  background-color: #28a745; /* Success Green */
+}
+
+.order-status-tag.canceled {
+  background-color: #dc3545; /* Danger Red */
+}
+
+/* Shipping Progress Bar */
+.shipping-progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.truck-icon, .location-icon {
+  font-size: 1.5rem;
+  color: #8B4513;
+}
+
+.location-start, .location-end, .est-arrival {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.est-arrival {
+  font-weight: 500;
+  color: #333;
+}
+
+.progress-dots {
+  flex-grow: 1;
+  height: 2px;
+  background-image: linear-gradient(to right, #ccc 33%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 8px 2px;
+  background-repeat: repeat-x;
+  margin: 0 1rem;
+}
+
+/* Order Items List */
+.order-items-list-new {
+  padding: 0.5rem 1.5rem;
+}
+
+.order-item-new {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item-new:last-child {
+  border-bottom: none;
+}
+
+.item-image-new {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info-new {
+  flex-grow: 1;
+}
+
+.item-name-new {
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.25rem;
+}
+
+.item-price-new, .item-size-new {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
+
+/* Order Card Footer */
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #f0f0f0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.total-price-new {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.total-price-new span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #8B4513;
+}
+
+.details-button {
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #6a350a;
+}
+
+.order-completed-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  gap: 0.5rem;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.completed-icon {
+  font-size: 1.2rem;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.review-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.review-button:hover {
+  background-color: #218838;
+}
+
+/* States: Loading, Error, Empty */
+.loading, .error, .no-orders-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #666;
+}
+
+.loading p, .error p, .no-orders-found p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.loading .fa-spinner, .error .fa-exclamation-circle, .no-orders-found .fa-shopping-bag {
+  color: #8B4513;
+  opacity: 0.7;
+}
+
+.btn-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #8B4513;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #654321;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .orders-page-container {
+    padding: 0.5rem;
+  }
+  .shipping-progress-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .progress-dots {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-main-title {
+    font-size: 1.5rem;
+  }
+  .tab-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  .order-card-header, .order-card-footer {
+    padding: 0.75rem 1rem;
+  }
+  .item-image-new {
+    width: 50px;
+    height: 50px;
+  }
+}
